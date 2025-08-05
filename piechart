@@ -1,0 +1,17 @@
+import matplotlib.pyplot as plt
+
+os_labels = ['Android', 'iOS', 'Others']
+market_share = [72, 26, 2]
+
+plt.figure(figsize=(6,6))
+plt.pie(market_share, labels=os_labels, autopct='%1.1f%%', startangle=140)
+plt.title("Mobile OS Market Share")
+plt.tight_layout()
+plt.show()
+
+plt.figure(figsize=(8,4))
+plt.barh(os_labels, market_share, color=['green', 'gray', 'purple'])
+plt.xlabel("Market Share (%)")
+plt.title("Mobile OS Market Share (Bar Chart)")
+plt.tight_layout()
+plt.show()
